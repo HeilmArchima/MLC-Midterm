@@ -1,0 +1,234 @@
+:root{
+  --bg: #FFF8E7;
+  --accent: #B7950B;
+  --muted: #2E4053;
+  --link: #1F618D;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: var(--bg);
+  background-image: url('thomas-stoop-thomasstoop-offspring.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: #111;
+  line-height:1.5;
+  padding:2rem;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background: linear-gradient(rgba(255,248,231,0.35), rgba(255,248,231,0.35));
+  pointer-events:none;
+  z-index:0;
+}
+
+.container{position:relative;z-index:1}
+
+.container{
+  max-width:900px;
+  margin:1.5rem auto;
+  background: rgba(255,255,255,0.6);
+  border: 2px solid rgba(183,149,11,0.15);
+  padding:1.25rem 1.5rem;
+  border-radius:10px;
+}
+
+.site-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:1rem;
+  margin-bottom:1rem;
+}
+
+.site-title{
+  margin:0;
+  color:var(--muted);
+  text-transform:capitalize;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.04), 2px 2px 6px rgba(46,64,83,0.08);
+}
+
+.brand{display:flex;align-items:center;gap:0.5rem}
+.site-logo{width:48px;height:48px;object-fit:contain}
+
+.main-nav a{
+  color:var(--link);
+  text-decoration:none;
+  font-family: 'Times New Roman', Times, serif;
+  margin-left:0.75rem;
+  padding:0.35rem 0.5rem;
+  border:1px solid #B7950B;
+  border-radius:6px ;
+}
+
+.main-nav a:hover{
+  background: rgba(31,97,141,0.06);
+  border-color: rgba(31,97,141,0.15);
+}
+
+.hero{
+  text-align:center;
+  padding:1rem 0 0.5rem;
+}
+
+.section-title{
+  text-align:center;
+  color:var(--muted);
+  margin:0.75rem 0 0.5rem;
+  font-size:1.25rem;
+}
+
+.name{
+  margin:0.25rem 0 0.5rem;
+  font-size:1.6rem;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:1px;
+  text-shadow: 0 2px 4px rgba(183,149,11,0.08);
+  border-bottom:3px solid rgba(183,149,11,0.12);
+  display:inline-block;
+  padding:0.25rem 0.75rem;
+  border-radius:6px;
+}
+
+.portrait{
+  width:250px;
+  height:250px;
+  max-width:100%;
+  display:block;
+  margin:1rem auto;
+  border:3px solid var(--accent);
+  border-radius:8px;
+  box-shadow: 0 6px 18px rgba(46,64,83,0.12);
+  object-fit:cover;
+}
+
+.role{
+  color:#fff;
+  background-color:var(--accent);
+  display:inline-block;
+  text-align:center;
+  font-weight:600;
+  margin:0.25rem 0;
+  padding:0.35rem 0.6rem;
+  border-radius:6px;
+  text-transform:capitalize;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.18);
+}
+
+.intro{
+  margin:10px 0;
+  font-size:1rem;
+  color:#333;
+  text-transform:uppercase;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+  font-style:italic;
+}
+
+.site-footer{
+  text-align:center;
+  margin-top:1.25rem;
+}
+
+.accent{
+  border:0;
+  height:3px;
+  background:linear-gradient(90deg, transparent, var(--accent) 30%, var(--accent) 70%, transparent);
+  margin:1rem auto;
+  width:60%;
+  border-radius:4px;
+}
+.btn{
+  display:inline-block;
+  color:var(--link);
+  text-decoration:none;
+  border:1px solid var(--accent);
+  padding:0.4rem 0.65rem;
+  border-radius:6px;
+  background: rgba(255,248,231,0.6);
+}
+
+.back-link{margin-bottom:0.5rem}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:0.5rem;
+  margin-top:1rem;
+}
+
+.media-item{
+  background:#fff;
+  border-radius:8px;
+  padding:0;
+  text-align:center;
+}
+
+.media-wrap{
+  overflow:hidden;
+  border-radius:6px;
+  border:3px solid var(--accent);
+  aspect-ratio: 16/12;
+  display:block;
+}
+
+.media-wrap img,
+.media-wrap video{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+}
+
+.media-caption{margin:0.5rem 0 0; font-weight:600}
+
+.hobby-list{display:flex;flex-wrap:wrap;gap:0.5rem;list-style:none;padding:0;margin:0}
+.hobby-list li{background:var(--accent);color:#fff;padding:0.25rem 0.5rem;border-radius:4px;font-size:0.9rem}
+
+.hobby-border-solid{border-style:solid}
+.hobby-border-dashed{border-style:dashed}
+.hobby-border-dotted{border-style:dotted}
+.hobby-border-double{border-style:double}
+.hobby-border-groove{border-style:groove}
+.hobby-border-ridge{border-style:ridge}
+.hobby-border-inset{border-style:inset}
+.hobby-border-outset{border-style:outset}
+
+.hobby-mt-5{margin-top:5px}
+.hobby-mt-10{margin-top:10px}
+.hobby-mt-20{margin-top:20px}
+.hobby-mr-5{margin-right:5px}
+.hobby-mr-10{margin-right:10px}
+.hobby-mr-20{margin-right:20px}
+.hobby-ml-5{margin-left:5px}
+.hobby-ml-10{margin-left:10px}
+.hobby-ml-20{margin-left:20px}
+.hobby-mb-5{margin-bottom:5px}
+.hobby-mb-10{margin-bottom:10px}
+.hobby-mb-20{margin-bottom:20px}
+
+.hobby-m-10{margin:10px}
+.hobby-mx-10{margin-left:10px;margin-right:10px}
+.hobby-my-10{margin-top:10px;margin-bottom:10px}
+
+.about{margin-top:1rem}
+.about h3{color:var(--muted);margin-bottom:0.5rem}
+.about p{margin:0 0 0.75rem;color:#222}
+
+.contact-icons{display:flex;gap:0.75rem;list-style:none;padding:0;margin:0;justify-content:center;align-items:center}
+.contact-icons li img{width:40px;height:40px;display:block;border-radius:6px;border:1px solid rgba(0,0,0,0.06)}
+
+.contact-icons.outside{position:relative;z-index:5;margin-top:-1.2rem;padding:0.4rem 0.6rem;border-radius:8px}
+.contact-icons.outside li img{background:var(--bg)}
+
+@media (max-width:520px){
+  .site-header{flex-direction:column;align-items:flex-start}
+  .main-nav a{margin-left:0;margin-right:0.5rem}
+  .container{padding:1rem}
+}
